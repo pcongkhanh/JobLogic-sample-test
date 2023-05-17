@@ -37,4 +37,19 @@ export class AppComponent implements OnInit {
     this.selectedEmployee.popularity = popularity;
     this.employeeService.editEmployee(this.selectedEmployee);
   }
+
+  public toggleSideBar() {
+    const menu = document.querySelector('.menu-button');
+    const sideBar = document.querySelector('app-employee-list');
+
+    menu?.classList.toggle('hide');
+    sideBar?.classList.toggle('show');
+  }
+
+  public employeeViewClick() {
+    const menu = document.querySelector('.menu-button');
+    if (menu?.classList.contains('hide')) {
+      this.toggleSideBar();
+    }
+  }
 }

@@ -22,9 +22,7 @@ export class EmployeeListComponent implements OnChanges {
 
   ngOnChanges(changes: SimpleChanges): void {
     if ('employees' in changes) {
-      console.log(changes);
       const employees = document.querySelectorAll('.employees__name');
-      console.log(employees);
       employees.forEach(employee => {
         employee.classList.add('cc');
       });
