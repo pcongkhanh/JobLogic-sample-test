@@ -1,0 +1,24 @@
+<div *ngIf="employee" class="employee-view">
+  <div class="employee-view__avatar">
+    <img [src]="'../../../assets/Profile-pics/' + employee.image" alt="" />
+  </div>
+
+  <div class="employee-view__info">
+    <div class="employee-view__name">{{ employee.name }}</div>
+    <div class="employee-view__popularity">
+      <span>Popularity</span>
+      <input
+        type="range"
+        min="1"
+        max="10"
+        [value]="employeePopularity"
+        (change)="employeePopularityChanged($event)"
+        class="employee-view__popularity__slider"
+        id="popularityRange" />
+    </div>
+    <div class="employee-view__biography">
+      <p class="employee-view__biography__title">Biography</p>
+      <p class="employee-view__biography__content">{{ employee.biography }}</p>
+    </div>
+  </div>
+</div>

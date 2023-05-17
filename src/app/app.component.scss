@@ -1,0 +1,38 @@
+.container {
+  position: relative;
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+  background-image: url('../assets/Header-image/Godfather-header.jpg');
+  background-size: cover;
+  background-position: top -250px center;
+}
+
+.gray-background {
+  position: absolute;
+  width: 100%;
+  height: calc(100% - 250px);
+  bottom: 0;
+  left: 0;
+  background: #403e3e;
+  box-shadow: 0 -50px 200px black;
+}
+
+app-employee-list,
+app-employee-view {
+  height: 100%;
+  overflow: auto;
+  z-index: 2;
+}
+
+app-employee-list {
+  width: 30%;
+  max-width: 500px;
+  min-width: 150px;
+  background-color: rgba($color: #000, $alpha: 0.5);
+}
+
+app-employee-view {
+  width: 70%;
+  flex-grow: 1;
+}
