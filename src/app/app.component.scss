@@ -27,12 +27,35 @@ app-employee-view {
 
 app-employee-list {
   width: 30%;
+
   max-width: 500px;
   min-width: 150px;
   background-color: rgba($color: #000, $alpha: 0.5);
+  transition: transform 0.6s;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    transform: translateX(-100%);
+  }
 }
 
 app-employee-view {
   width: 70%;
   flex-grow: 1;
+  transition: width 0.6s;
+
+  @media screen and (max-width: 768px) {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  @media screen and (max-width: 767px) {
+    width: 95%;
+  }
 }

@@ -4,6 +4,7 @@ html {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 300;
+  overflow: hidden;
 
   @media screen and (max-width: 1024px) {
     font-size: 15px;
