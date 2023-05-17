@@ -24,7 +24,7 @@
     padding: 5px;
     text-align: center;
     background-color: transparent;
-    transition: background-color 0.1s 0.1s;
+    transition: background-color 0.1s 0.1s, font-size 0.3s;
     cursor: pointer;
 
     &:hover,
@@ -32,12 +32,35 @@
       background-color: rgba($color: #4e4e4eb9, $alpha: 0.6);
     }
 
-    @media screen and (max-width: 1024px) {
-      font-size: 1.5rem;
+    &[name-size='1'] {
+      font-size: calc(4rem * (1 / 10));
     }
-
-    @media screen and (max-width: 767px) {
-      font-size: 1rem;
+    &[name-size='2'] {
+      font-size: calc(4rem * (2 / 10));
+    }
+    &[name-size='3'] {
+      font-size: calc(4rem * (3 / 10));
+    }
+    &[name-size='4'] {
+      font-size: calc(4rem * (4 / 10));
+    }
+    &[name-size='5'] {
+      font-size: calc(4rem * (5 / 10));
+    }
+    &[name-size='6'] {
+      font-size: calc(4rem * (6 / 10));
+    }
+    &[name-size='7'] {
+      font-size: calc(4rem * (7 / 10));
+    }
+    &[name-size='8'] {
+      font-size: calc(4rem * (8 / 10));
+    }
+    &[name-size='9'] {
+      font-size: calc(4rem * (9 / 10));
+    }
+    &[name-size='10'] {
+      font-size: calc(4rem * (10 / 10));
     }
   }
 }

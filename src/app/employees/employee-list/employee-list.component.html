@@ -6,7 +6,7 @@
   <ng-container *ngFor="let employee of employees">
     <div
       class="employees__name"
-      [attr.name]="employee.name"
+      [attr.name-size]="employee.popularity"
       [ngClass]="{ selected: selectedEmployee.name === employee.name }"
       (click)="selectEmployee(employee)">
       {{ employee.name }}
